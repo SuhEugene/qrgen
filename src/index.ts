@@ -1,10 +1,10 @@
 import { decideRenderer, getQr, getQrOptions, getQrType, type QRRenderer } from "./qr";
+import tmpHtml from "./tmp.html.txt";
 import indexText from "./index.txt";
 import helpText from "./help.txt";
 import { composeHTML, composeText } from "./text";
 
-async function renderPage(text: string, renderer: QRRenderer, baseURL: string, isCode = true) {
-  const tmpHtml = await Bun.file("./src/tmp.html").text();
+function renderPage(text: string, renderer: QRRenderer, baseURL: string, isCode = true) {
   if (renderer === "html")
     return new Response(
       tmpHtml
