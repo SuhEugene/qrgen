@@ -15,9 +15,12 @@ function renderPage(text: string, renderer: QRRenderer, baseURL: string, isCode 
   return new Response(composeText(text, baseURL));
 }
 
-Bun.serve({
-  port: 3000,
-  hostname: "0.0.0.0",
+const PORT = process.env.PORT || 3000;
+const HOST = process.env.HOST || "0.0.0.0";
+
+const server = Bun.serve({
+  port: PORT,
+  hostname: HOST,
   routes: {
     "/*": (req) => {
       const url = new URL(req.url);
@@ -36,3 +39,5 @@ Bun.serve({
     },
   },
 });
+
+console.log(`Server running at ${server.url}`);
