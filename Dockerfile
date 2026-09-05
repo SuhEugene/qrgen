@@ -14,7 +14,7 @@ ENV NODE_ENV=production
 RUN bun run build
 
 FROM base AS release
-COPY --from=build /usr/src/app/out/index.js .
+COPY --from=build /usr/src/app/out/ .
 
 # run the app
 USER bun
