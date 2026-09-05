@@ -1,15 +1,31 @@
-# qrgen
+# QR Code Generator
 
-To install dependencies:
+This is a simple QR code generator that can be used to generate QR codes from any text.
 
-```bash
+## Development
+
+Install dependencies:
+
+```sh
 bun install
 ```
 
-To run:
+Run the development server:
 
-```bash
-bun run index.ts
+```sh
+bun run dev
 ```
 
-This project was created using `bun init` in bun v1.3.14. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+## Deployment
+
+Build the application:
+
+```sh
+bun run build
+```
+
+The built application will be available in the `out` directory.
+
+## License
+
+This project is licensed under the MIT License.

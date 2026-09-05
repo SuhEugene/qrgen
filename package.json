@@ -3,6 +3,12 @@
   "module": "index.ts",
   "type": "module",
   "private": true,
+  "scripts": {
+    "build": "bun build --target=bun --production --outfile=out/index.js ./src/index.ts",
+    "dev": "bun run --hot ./src/index.ts",
+    "lint": "oxlint",
+    "fmt": "oxfmt"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
