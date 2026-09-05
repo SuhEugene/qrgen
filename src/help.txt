@@ -1,0 +1,56 @@
+[GRN]   ___  ___              _[RST]
+[GRN]  / _ \| _ \  __ ___  __| |___[RST]
+[GRN] | (_) |   / / _/ _ \/ _` / -_)[RST]
+[GRN]  \__\_\_|_\ \__\___/\__,_\___|[RST]
+[GRN]  __ _ ___ _ _  ___ _ _ __ _| |_ ___ _ _ [RST]
+[GRN] / _` / -_) ' \/ -_) '_/ _` |  _/ _ \ '_|[RST]
+[GRN] \__, \___|_||_\___|_| \__,_|\__\___/_|[RST]
+[GRN] |___/[RST]
+
+Paste any text after [MGT]?[RST] or [MGT]?q=[RST] to generate a QR code
+
+Examples:
+  [CYN]SITE[GRN]/[MGT]?https://example.com[RST]
+  [CYN]SITE[GRN]/[MGT]?q=My+QR+Message[RST]
+
+Browser should open you a page with SVG code
+Terminal should print the QR code in ANSI
+
+For specific output use paths:
+  ANSI:
+    [GRN]/a[RST], [GRN]/ansi[RST]
+  SVG:
+    [GRN]/s[RST], [GRN]/svg[RST]
+  Unicode:
+    [GRN]/u[RST], [GRN]/uni[RST], [GRN]/unc[RST], [GRN]/utf8[RST], [GRN]/utf-8[RST], [GRN]/unicode[RST]
+  Unicode compact:
+    [GRN]/uc[RST], [GRN]/utf8c[RST], [GRN]/utf-8c[RST]
+    or any of Unicode with "[GRN]-c[RST]" or "[GRN]-compact[RST]" suffix
+
+Examples:
+  [CYN]SITE[GRN]/a[MGT]?hello[GRY] - ansi output[RST]
+  [CYN]SITE[GRN]/s[MGT]?hello[GRY] - svg output[RST]
+
+You can force specific rendering by adding file extension:
+  Text: [GRN].txt[RST], [GRN].svg[RST]
+  Browser: [GRN].html[RST]
+
+Examples:
+  [CYN]SITE[GRN]/utf8[GRN].html[MGT]?hello[GRY] - html output[RST]
+
+  [GRY]curl -LO [CYN]SITE[GRN]/file[GRN].svg[MGT]?hello[GRY] - svg output[RST]
+                                 [GRY]^^^^[RST]
+           [GRY]"file" here is ignored as unknown path value[RST]
+
+If you want to customize QR code, you can use query parameters:
+  [MGT]q[RST] - message to encode
+  [MGT]minv[RST], [MGT]mnv[RST], [MGT]mn[RST] - minimum version of QR code [GRY](1-40)[RST]
+  [MGT]maxv[RST], [MGT]mxv[RST], [MGT]mx[RST] - maximum version of QR code [GRY](1-40)[RST]
+  [MGT]ecc[RST], [MGT]ec[RST], [MGT]e[RST] - error correction level [GRY](L, M, Q, H)[RST]
+  [MGT]border[RST], [MGT]b[RST] - border around the QR code [GRY](1-64)[RST]
+  [MGT]invert[RST], [MGT]i[RST] - invert black and white [GRY](0, 1, presence)[RST]
+
+Examples:
+  [CYN]SITE[GRN]/[MGT]?q=hello&mn=2&mx=10&ecc=Q[RST]
+  [CYN]SITE[GRN]/[MGT]?q=meow&b=5&i[RST]
+

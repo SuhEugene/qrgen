@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR code generator</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: monospace;
+        font-size: 16px;
+        line-height: 17px;
+        padding: 12px;
+        background-color: #1e1e1e;
+        color: #d4d4d4;
+        min-height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      main {
+        white-space: pre-wrap;
+        max-width: fit-content;
+        min-width: 300px;
+      }
+      main.text { line-height: 1.3; }
+      .cyan { color: #61a5c2; }
+      .yellow { color: #f9c74f; }
+      .green { color: #90be6d; }
+      .magenta { color: #cb9ba4; }
+      .gray { color: #7f8b95; }
+    </style>
+  </head>
+  <body>
+    <main class="[CODE]">[PAGE]</main>
+  </body>
+</html>

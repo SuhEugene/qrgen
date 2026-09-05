@@ -1,0 +1,18 @@
+[GRN]   ___  ___              _[RST]
+[GRN]  / _ \| _ \  __ ___  __| |___[RST]
+[GRN] | (_) |   / / _/ _ \/ _` / -_)[RST]
+[GRN]  \__\_\_|_\ \__\___/\__,_\___|[RST]
+[GRN]  __ _ ___ _ _  ___ _ _ __ _| |_ ___ _ _ [RST]
+[GRN] / _` / -_) ' \/ -_) '_/ _` |  _/ _ \ '_|[RST]
+[GRN] \__, \___|_||_\___|_| \__,_|\__\___/_|[RST]
+[GRN] |___/[RST]
+
+Paste any text after [MGT]?[RST] or [MGT]?q=[RST] to generate a QR code
+
+Examples:
+  [CYN]SITE[GRN]/[MGT]?https://example.com[RST]
+  [CYN]SITE[GRN]/[MGT]?q=My+QR+Message[RST]
+
+Paths:
+  [GRN]/a[RST] - ANSI, [GRN]/s[RST] - SVG, [GRN]/u[RST] - Unicode, [GRN]/uc[RST] - Unicode compact
+  [GRN]/help[RST] - detailed description
