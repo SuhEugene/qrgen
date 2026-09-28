@@ -1,4 +1,6 @@
-FROM oven/bun:1 AS base
+# Pinned: 1.3.9+ mis-decodes UTF-8 on CPUs without SSE4.2/AVX (e.g. KVM
+# "Common KVM processor"), spinning a core at 100% and never serving.
+FROM oven/bun:1.3.8 AS base
 WORKDIR /usr/src/app
 
 FROM base AS install
